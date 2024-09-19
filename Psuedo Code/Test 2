@@ -1,1 +1,5 @@
-
+If the joystick is pushed forward then the car moves fowrward
+If you push the joystick forward slightly then the car moves forward slightly
+If you push the joystick to the right then only the right wheel should move forward
+If you push the joystick to the left then only the left wheel should move forward
+If you push the joystick back then both wheels should move in a reversed motion
