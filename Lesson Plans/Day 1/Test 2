@@ -2,7 +2,6 @@ task main()
 {
   int LeftC = vexRT[Ch3];
   int RightC = VexRT[Ch2];
-}
 
 while(2==2)
 {
@@ -27,4 +26,5 @@ while(2==2)
     motor[RightMotor] = RightC * 3;
     motor[LeftMotor] = LeftC * 3;
   }
+}
 }
