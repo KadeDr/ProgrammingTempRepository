@@ -4,7 +4,7 @@ task main(){
 int LeftS = vexRT[Ch3];
 int RightS = vexRT[Ch2];
 //^joysticks
-int alive = whateverSwitch;
+bool alive = whateverSwitch;
 //^ kill switch?
 
 while(alive){
@@ -14,7 +14,7 @@ while(alive){
   alive = whateverButton
 
   if (whateverSwitch == 0){
-  alive = 0; 
+  alive = false; 
   }
 //^^ if switch is off 
   motor[RightMotor] = RightS;
