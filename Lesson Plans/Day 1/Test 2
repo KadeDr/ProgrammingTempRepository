@@ -1,1 +1,30 @@
+task main()
+{
+  int LeftC = vexRT[Ch3];
+  int RightC = VexRT[Ch2];
+}
 
+while(2==2)
+{
+  LeftC = VexRT[Ch3];
+  RightC = vexRT[Ch2];
+  
+  if(motor[RightMotor] >= 180)
+  {
+    motor[RightMotor] = 0
+  }
+  else
+  {
+    motor[RightMotor] = RightC * 3;
+    motor[LeftMotor] = LeftC * 3;
+  } 
+  if(motor[LeftMotor] >= 180)
+  {
+    motor[LeftMotor] = 0
+  }
+  else
+  {
+    motor[RightMotor] = RightC * 3;
+    motor[LeftMotor] = LeftC * 3;
+  }
+}
