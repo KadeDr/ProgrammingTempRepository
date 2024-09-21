@@ -4,3 +4,42 @@ void TempCode()
   Debug.Log("What is this?");
 }
 
+using System.Diagnostics.CodeAnalysis;
+
+string input1;
+string input2;
+string inputSign;
+int num1;
+int num2;
+int sum;
+Console.WriteLine("Input 1");
+input1 = Console.ReadLine();
+
+Console.WriteLine("What sign (+, -, *, /)");
+inputSign = Console.ReadLine();
+
+Console.WriteLine("Input 2");
+input2 = Console.ReadLine();
+
+num1 = Int32.Parse(input1);
+num2 = Int32.Parse(input2);
+
+if(inputSign == "+"){
+    Console.WriteLine("Your number is");
+    Console.WriteLine(num1 + num2);
+}
+
+if(inputSign == "-"){
+    Console.WriteLine("Your number is");
+    Console.WriteLine(num1 - num2);
+}
+
+if(inputSign == "*"){
+    Console.WriteLine("Your number is");
+    Console.WriteLine(num1 * num2);
+}
+
+if(inputSign == "/"){
+    Console.WriteLine("Your number is");
+    Console.WriteLine(num1 / num2);
+}
