@@ -6,19 +6,10 @@
 
 task main()
 {
-	//define the joysticks
-	int LeftC = vexRT[Ch3];
-	int RightC = vexRT[Ch2];
-
-	while(1==1)
+	while(True)
 	{
-		//redefines joysticks
-		LeftC = vexRT[Ch3];
-		RightC = vexRT[Ch2];
-		{
-		        //sets motor speed to joystick
-			motor[RightMotor] = RightC;
-			motor[LeftMotor] = LeftC;
-		}
+                //sets motor speed to joystick
+	        motor[RightMotor] = RightC;
+		motor[LeftMotor] = LeftC;
 	}
 }
