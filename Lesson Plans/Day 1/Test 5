@@ -1,1 +1,13 @@
+task.main()
+{
+//Tomfoolery
+int LeftC = vexRT[Ch3];
+int RightC = vexRT[Ch2];
+while(true)
+{
+  LeftC = vexRT[Ch3];
+  RightC = vexRT[Ch2];
 
+motor[RightMotor] = RightC;
+motor[LeftMotor] = LeftC;
+}
