@@ -9,33 +9,14 @@ task main()
 	//define the joysticks
 	int LeftC = vexRT[Ch3];
 	int RightC = vexRT[Ch2];
-	int Left7 = vexRT[Btn7L];
 
 	while(1==1)
 	{
 		//redefines joysticks
 		LeftC = vexRT[Ch3];
 		RightC = vexRT[Ch2];
-		Left7 = vexRT[Btn7L];
-
-		if (Left7 == 1) {
-			writeDebugStreamLine("Value: %d", SensorValue(IR1));
-			writeDebugStreamLine("Value: %d", SensorValue(IR2));
-			if (SensorValue(IR1) == SensorValue(IR2)) {
-				motor[LeftMotor] = 100;
-				motor[RightMotor] = 100;
-			}
-			else if (SensorValue(IR2) == 1) {
-				motor[LeftMotor] = -100;
-				motor[RightMotor] = 100;
-			}
-			else if (SensorValue(IR1) == 1) {
-				motor[LeftMotor] = 100;
-				motor[RightMotor] = -100;
-			}
-		}
-		else {
-			//sets motor speed to joystick
+		{
+		        //sets motor speed to joystick
 			motor[RightMotor] = RightC;
 			motor[LeftMotor] = LeftC;
 		}
