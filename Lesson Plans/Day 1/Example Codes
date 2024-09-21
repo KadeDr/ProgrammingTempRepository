@@ -4,6 +4,3 @@ void TempCode()
   Debug.Log("What is this?");
 }
 
-local Value 1
-local Value 2
-
