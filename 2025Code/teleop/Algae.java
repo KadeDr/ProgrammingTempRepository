@@ -1,5 +1,9 @@
 package frc.robot.teleop;
 
+// import wpilib imports
+
+// import rev imports
+
 public class Algae {
 
   // Variables
@@ -12,6 +16,7 @@ public class Algae {
   }
 
   public void Outake() {
+    // Sets the position of the elevator to the correct position in case of incorrect positioning
     // Spins the motors in the positive direction to outake the ball
   }
   
