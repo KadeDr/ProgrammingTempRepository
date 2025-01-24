@@ -1,7 +1,9 @@
 package frc.robot.autonomous;
 
+public class Abort {
 
-
-public class abort {
+  public void AbortAuto() {
+    // Aborts any running auto
+  }
   
 }
