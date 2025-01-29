@@ -5,6 +5,9 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.motorcontrol.Spark;
 import edu.wpi.first.wpilibj.Encoder;
 
+import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+
 // import rev imports
 
 public class Algae {
@@ -14,18 +17,22 @@ public class Algae {
     Motor Controllers
     */
 
-  private Spark m_rotationMotor;
+  private SparkMax m_rotationMotor;
   private Encoder m_rotationEncoder;
   private PIDController m_rotationPID;
+
+  private SparkMax m_intakeMotor;
 
   private double intakePosition = 1;
   private double outakePosition = 0;
 
   public void Initialize()
   {
-    m_rotationMotor = new Spark(0);
+    m_rotationMotor = new SparkMax(9, MotorType.kBrushless);
     m_rotationEncoder = new Encoder(0, 1);
     m_rotationPID = new PIDController(0.1, 0.0, 0.0, encoder, motor);
+
+    m_intakeMotor = new SparkMax(10, MotorType.kBrushless);
   }
 
   public void ChangePosition(double newPosition)
@@ -34,16 +41,23 @@ public class Algae {
 
     m_rotationPID.enable();
   }
+
+  public void SpinIntake(double direction)
+  {
+    m_intakeMotor.set(direction);
+  }
   
   public void Intake() {
     // Spins the motors in the negative direction to intake the ball
     ChangePosition(intakePosition);
+    SpinIntake(1);
   }
 
   public void Outake() {
     // Sets the position of the elevator to the correct position in case of incorrect positioning
     // Spins the motors in the positive direction to outake the ball
     ChangePosition(outakePosition);
+    SpinIntake(-1);
   }
   
 }
