@@ -23,9 +23,6 @@ public class Algae {
 
   private SparkMax m_intakeMotor;
 
-  private double intakePosition = 1;
-  private double outakePosition = 0;
-
   public void Initialize()
   {
     m_rotationMotor = new SparkMax(9, MotorType.kBrushless);
@@ -47,17 +44,10 @@ public class Algae {
     m_intakeMotor.set(direction);
   }
   
-  public void Intake() {
-    // Spins the motors in the negative direction to intake the ball
-    ChangePosition(intakePosition);
-    SpinIntake(1);
-  }
-
-  public void Outake() {
-    // Sets the position of the elevator to the correct position in case of incorrect positioning
-    // Spins the motors in the positive direction to outake the ball
-    ChangePosition(outakePosition);
-    SpinIntake(-1);
+  public void Intake(double direction, double newPosition)
+  {
+    ChangePosition(newPosition);
+    SpinIntake(direction);
   }
   
 }
