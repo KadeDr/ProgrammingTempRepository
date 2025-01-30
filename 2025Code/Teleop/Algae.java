@@ -27,7 +27,7 @@ public class Algae {
   {
     m_rotationMotor = new SparkMax(9, MotorType.kBrushless);
     m_rotationEncoder = new Encoder(0, 1);
-    m_rotationPID = new PIDController(0.1, 0.0, 0.0, encoder, motor);
+    m_rotationPID = new PIDController(0.1, 0.0, 0.0, m_rotationEncoder, m_rotationMotor);
 
     m_intakeMotor = new SparkMax(10, MotorType.kBrushless);
   }
